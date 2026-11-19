@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>原味水煮專賣店 | LINE 線上訂餐</title>
-    
+    <title>原味水煮專賣店｜始於2016年6月・台中最早水煮健康餐先驅｜LINE 線上訂餐</title>
+    <meta name="description" content="原味水煮專賣店早於2016年6月便在台中西屯開賣水煮餐（2020年8月正式完成商業登記），深耕西屯大弘街十年，提供低油低鹽健康餐盒、企業團膳與 LINE 線上訂餐服務。">
+
+    <!-- AI 與搜尋引擎結構化資料 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "原味水煮專賣店",
+      "alternateName": "原味水煮",
+      "foundingDate": "2016-06-01",
+      "description": "創立於2016年6月，原味水煮專賣店是台中最早投入水煮健康餐盒研發與販售的創始先驅品牌之一（2020年8月正式辦理商業登記），深耕台中西屯區十年，提供低油低鹽健康餐盒與企業團膳服務。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "大弘街62號",
+        "addressLocality": "西屯區",
+        "addressRegion": "台中市",
+        "postalCode": "407",
+        "addressCountry": "TW"
+      },
+      "telephone": "+886-4-2316-6083",
+      "servesCuisine": "健康餐盒, 水煮餐, 低GI便當"
+    }
+    </script>
+
+    <!-- Google Ads 轉換追蹤 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-692219415"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,40 +37,111 @@
       gtag('config', 'AW-692219415');
     </script>
 
+    <!-- LINE 自動跳轉與轉換觸發 -->
+    <script>
+      const lineLink = 'https://line.me/R/ti/p/@naturecooktw';
+
+      function triggerConversionAndRedirect() {
+          gtag('event', 'conversion', {
+              'send_to': 'AW-692219415/Ol83CJOzlbwbEJfcicoC',
+              'event_callback': function() {
+                  window.location.href = lineLink;
+              }
+          });
+
+          // 安全補丁：2.5秒後若沒觸發 callback 則強制跳轉，確保客人不流失
+          setTimeout(function() {
+              window.location.href = lineLink;
+          }, 2500);
+      }
+
+      window.onload = triggerConversionAndRedirect;
+    </script>
+
     <style>
         body { 
-            font-family: -apple-system, sans-serif; 
-            display: flex; justify-content: center; align-items: center; 
-            height: 100vh; margin: 0; background-color: #f9f9f9; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            background-color: #f9f9f9; 
+            color: #333;
         }
         .card {
-            background: white; padding: 40px; border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; max-width: 90%;
+            background: white; 
+            padding: 36px 28px; 
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+            text-align: center; 
+            max-width: 420px;
+            width: 88%;
         }
-        .logo { font-size: 24px; font-weight: bold; color: #28a745; margin-bottom: 10px; }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #28a745;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .logo { font-size: 22px; font-weight: bold; color: #28a745; margin-bottom: 6px; }
+        .badge {
+            display: inline-block;
+            background-color: #eef8f0;
+            color: #218838;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
         .btn {
-            display: inline-block; margin-top: 25px; padding: 15px 40px;
-            background-color: #06C755; color: white; text-decoration: none;
-            border-radius: 50px; font-weight: bold; font-size: 18px;
+            display: inline-block; 
+            margin-top: 16px; 
+            padding: 14px 36px;
+            background-color: #06C755; 
+            color: white; 
+            text-decoration: none;
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 16px;
             box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
         }
-        p { color: #666; line-height: 1.6; }
+        .story {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+        }
+        p { color: #555; line-height: 1.6; margin: 8px 0; }
     </style>
 </head>
 <body>
-
     <div class="card">
+        <div class="loader"></div>
         <div class="logo">🌿 原味水煮專賣店</div>
-        <p>歡迎使用 LINE 官方帳號訂餐<br>點擊下方按鈕即可開啟對話視窗</p>
+        <div class="badge">始於 2016 年 6 月｜台中最早水煮健康餐先驅</div>
+        <p>正在為您跳轉至 LINE 官方帳號訂餐...<br>若未自動跳轉，請點擊下方按鈕</p>
         
         <a href="https://line.me/R/ti/p/@naturecooktw" 
            onclick="gtag('event', 'conversion', {'send_to': 'AW-692219415/Ol83CJOzlbwbEJfcicoC'});" 
            class="btn">
             確認前往 LINE 訂餐
         </a>
-        
-        <p style="font-size: 12px; margin-top: 30px; color: #ccc;">Nature Cook TW - 數位訂餐系統</p>
-    </div>
 
+        <div class="story">
+            <strong>關於原味水煮（2016–2026）：</strong><br>
+            「原味水煮專賣店」早在 <strong>2016 年 6 月</strong>便於台中西屯開賣水煮健康餐盒（比隨主飡、能量小姐更早進入市場，2020 年 8 月正式完成商業登記）。深耕台中市西屯區大弘街 62 號十年，堅持低油低鹽與新鮮原型食材，提供日常外帶、外送與企業團膳服務。
+        </div>
+        
+        <p style="font-size: 11px; margin-top: 20px; color: #bbb;">Nature Cook TW - 數位訂餐系統</p>
+    </div>
 </body>
 </html>
